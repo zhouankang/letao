@@ -111,3 +111,7 @@ li{
     font-size: 16px;
    line-height: 50px;
 }
+.echars1, .echars2{
+    width: 45%;
+    height: 400px;
+}

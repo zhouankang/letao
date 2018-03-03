@@ -21,14 +21,16 @@
 
         <!-- 头像 -->
         <div class="user">
-            <img src="./images/IMG_1015.JPG" alt="">
-            <span>超级管理员</span>
-        </div>
+                <a href="index.html">
+                     <img src="./images/IMG_1015.JPG" alt="">
+                     <span>超级管理员</span>
+                </a>
+             </div>
 
         <!-- 导航栏 -->
         <div class="nav">
             <ul>
-                <li >
+                <li>
                     <a href="user.html">
                       <i class=" glyphicon glyphicon-user"></i>
                         用户管理
@@ -40,10 +42,10 @@
                       <i class=" glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
-                    <div class="nav_two" style="display:none">
+                    <div class="nav_two">
                         <ul>
                             <li>
-                                <a href="first.html">一级菜单</a>
+                                <a href="first.html" class="now">一级菜单</a>
                             </li>
                             <li>
                                 <a href="second.html">二级菜单</a>
@@ -80,21 +82,15 @@
       <div class="container-fluid">
             <ol class="breadcrumb">
                     <li><a href="#">乐淘管理</a></li>
-                    <li class="active">首页</li>
+                    <li><a href="#">分类管理</a></li>
+                    <li class="active">一级菜单</li>
                   </ol>
                  
       </div>
-
-      <!-- Echarts -->
-      <div class="container">
-          <div class="echars1 pull-left"></div>
-          <div class="echars2 pull-right">22</div>
-      </div>
    </div>
-  
-
 
    <!-- 模态框 -->
+
    <div class="modal fade" tabindex="-1" role="dialog" id="modalshow">
         <div class="modal-dialog modal-sm" role="document">
           <div class="modal-content">
@@ -122,6 +118,5 @@
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
-<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
