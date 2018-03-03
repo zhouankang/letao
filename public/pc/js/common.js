@@ -11,5 +11,6 @@ $(function(){
   $(document).ajaxStop(function(){
      NProgress.done();
   })
-      
+     
+  
 })
