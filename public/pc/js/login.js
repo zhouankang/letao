@@ -1,0 +1,70 @@
+$(function(){
+    $("form").bootstrapValidator({
+        fields:{
+           username:{
+                //校验字段
+            validators:{
+                notEmpty:{//验证非空
+                    message:"用户名不能为空"
+                },
+                stringLength:{
+                    min:2,
+                    max:6,
+                    message:"长度必须在2到6位之间"
+                },
+                callback:{
+                    message:"用户名不存在"
+                }
+            }
+           },
+           //校验密码
+           password:{
+               validators:{
+                   notEmpty:{ //检验非空
+                       message:"密码不能为空"
+                   },
+                   stringLength:{//校验长度
+                       min:4,
+                       max:12,
+                       message:"长度必须在4到12位之间"
+                   },
+                   callback:{
+                       message:"密码错误"
+                   }
+               }
+           }
+        },
+        //根据验证结果显示各种图标
+        feedbackIcons:{
+            valid:"glyphicon glyphicon-ok",
+            invalid:"glyphicon glyphicon-remove",
+            validating:"glyphicon glyphicon-refresh"
+        }     
+        
+    });
+      //点击按钮发送ajax请求；验证密码
+      $("form").on("success.form.bv",function(e){
+          e.preventDefault();//阻止浏览器的默认行为
+            $.ajax({//发送ajax请求
+                type:"post",
+                url:"/employee/employeeLogin",
+                data:$("form").serialize(),
+                dataType:"json",
+                success:function(info){
+                    // console.log(info)
+                    if(info.error===1000){
+                        $("form").data("bootstrapValidator").updateStatus('username','INVALID','callback')
+                    }
+                    if(info.error===1001){
+                       $("form").data("bootstrapValidator").updateStatus('password','INVALID','callback')
+                    }
+                    if(info.success){
+                        location.href="index.html"
+                    }
+                }
+            })
+      });
+  $("[type='reset']").on("click",function(){
+      $("form").data("bootstrapValidator").resetForm(true);
+  })
+})
