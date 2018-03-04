@@ -122,3 +122,23 @@ li{
     text-align: center;
     vertical-align: middle;
 }
+
+.btn_add{
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+}
+.btn_add:hover{
+    background-color: #e6e6e6;
+}
+.mb_20{
+    margin-bottom: 20px;
+}
+/* 
+.first{
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
