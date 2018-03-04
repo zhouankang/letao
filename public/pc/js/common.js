@@ -1,4 +1,4 @@
-$(function(){
+;$(function(){
     //禁用进度环；
     // NProgress.configure({ showSpinner: false });
 
@@ -11,6 +11,7 @@ $(function(){
   $(document).ajaxStop(function(){
      NProgress.done();
   })
-     
+
   
-})
+});
+
