@@ -108,12 +108,13 @@ $(function(){
             $("#categoryId").val(id);
         })
     });
-
+  //上传图片；
     $("#fileupload").fileupload({
         dataType:"json",
-        done:function (e,data){
+        //e：事件对象
+        //data：图片上传后的对象，通过e.result.picAddr可以获取上传后的图片地址
+        done:function (e, data) {
             console.log(data);
         }
-    });
-
+    })
 });
