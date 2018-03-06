@@ -1,0 +1,105 @@
+html,
+body{
+    background-color: #fff;
+}
+.lt_header{
+    height: 45px;
+    background-color: #0062cc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.lt_fooder{
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #0062cc;
+}
+
+
+.lt_header .icon_left,
+.lt_header .icon_right{
+  position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+.lt_header .icon_left{
+    left: 0;
+}
+.lt_header .icon_right{
+    right: 0;
+}
+h4{
+    text-align: center;
+    line-height: 45px;
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+}
+.lt_main{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+}
+.lt_fooder ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.lt_fooder ul li span,
+.lt_fooder ul li p{
+    color: #fff;
+}
+.lt_fooder ul li.now span,
+.lt_fooder ul li.now p{
+    color: darkorange;
+}
+
+/*nav开始*/
+.lt_nav{
+    padding: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.lt_nav ul li a img {
+    float: left;
+    width: 33.33%;
+}
+.lt_product{
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.lt_product ul li{
+    width: 48%;
+    height: 48%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    float: left;
+    margin-bottom: 10px;
+}
+.lt_product ul li:nth-child(odd){
+    margin-right: 4%;
+}
+.lt_product ul li img{
+    width: 100%;
+}
+.lt_product_now{
+    color: red;
+}
+.lt_product_old{
+    text-decoration: line-through;
+}
+
