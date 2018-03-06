@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类页</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="lt_header">
+        <a href="index.html" class="icon_left"><span class="mui-icon mui-icon-back "></span></a>
+        <h4>乐淘云购</h4>
+        <a href="#" class="icon_right"><span class="fa fa-search"></span></a>
+    </div>
+    <!--头部结束-->
+         <div class="lt_main">
+           <div class="mui-scroll-wrapper">
+              <div class="mui-scroll">
+                  <div class="nav">
+                      <!--渲染-->
+                  </div>
+                  <div class="product">
+                      <ul>
+                          <!--<li>-->
+                              <!--<a href="#">-->
+                                  <!--<img src="./images/none.png" alt="">-->
+                                  <!--<p>耐克</p>-->
+                              <!--</a>-->
+                          <!--</li>-->
+                      </ul>
+                  </div>
+             </div>
+          </div>
+         </div>
+    <!--底部-->
+    <div class="lt_fooder">
+        <ul>
+            <li class="now">
+                <a href="#">
+                    <span class="fa fa-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html">
+                    <span class="fa fa-home"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="fa fa-home"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="fa fa-home"></span>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+<script type="text/template" id="tmp_first">
+    <ul>
+      {{each rows v i}}
+        <li class="{{i==0?'now':''}}"><a href="#">{{v.categoryName}}</a></li>
+        {{/each}}
+    </ul>
+</script>
+<script type="text/template" id="tmp_second">
+    {{each rows v i}}
+    <li>
+        <a href="#">
+            <img src="{{v.brandLogo}}" alt="">
+            <p>{{v.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>

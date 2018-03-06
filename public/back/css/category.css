@@ -1,0 +1,34 @@
+.nav{
+    width: 90px;
+    height: 100%;
+    float: left;
+}
+.product{
+    height: 100%;
+    overflow: hidden;
+}
+.nav ul li{
+    height: 50px;
+    background-color: pink;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+}
+.nav ul li.now{
+    background-color: #fff;
+    border-right: #fff;
+}
+li{
+    list-style: none;
+}
+.product  li{
+    width: 33%;
+   float: left;
+    text-align: center;
+    margin-top: 5px;
+}
+.product li img{
+    width: 62px;
+    height: 62px;
+}
