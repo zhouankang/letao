@@ -65,7 +65,9 @@ h4{
     width: 25%;
     text-align: center;
     margin-top: 10px;
-
+}
+.lt_fooder ul li a{
+    display: block;
 }
 .lt_fooder ul li span,
 .lt_fooder ul li p{

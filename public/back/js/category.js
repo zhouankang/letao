@@ -7,27 +7,26 @@ $(function(){
             type:"GET",
             url:"/category/queryTopCategory",
             success:function(info){
-                console.log(info)
                 $(".nav").html(template("tmp_first",info));
-                rendersecond(info.rows[0].id)
             }
         });
 
+    //根据i渲染二级
+    $(".nav").on("click","li",function(){
+        $(this).addClass("now").siblings().removeClass("now");
+        var id=$(this).data("id");
+        $.ajax({
+            type:"get",
+            url:"/category/querySecondCategory",
+            data:{
+                id:id
+            },
+            success:function(info){
+                console.log(info)
+                $(".product").html(template("tmp_second",info))
+            }
+        })
 
-
-    //二级分类
-function rendersecond(id){
-    $.ajax({
-        type:"get",
-        url:"/category/querySecondCategory",
-        data:{
-            id:id
-        },
-        success:function(info){
-            console.log(info)
-            $(".product").html(template("tmp_second",info))
-        }
     })
 
-}
 });

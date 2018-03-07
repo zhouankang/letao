@@ -19,26 +19,26 @@
         <h4>乐淘云购</h4>
         <a href="#" class="icon_right"><span class="fa fa-search"></span></a>
     </div>
-    <!--中部-->
-         <div class="lt_main">
-           <div class="mui-scroll-wrapper">
-              <div class="mui-scroll">
-                  <div class="nav">
-                      <!--渲染-->
-                  </div>
-                  <div class="product">
-                      <ul>
-                          <!--<li>-->
-                              <!--<a href="#">-->
-                                  <!--<img src="./images/none.png" alt="">-->
-                                  <!--<p>耐克</p>-->
-                              <!--</a>-->
-                          <!--</li>-->
-                      </ul>
-                  </div>
-             </div>
-          </div>
-         </div>
+    <!--头部结束-->
+    <div class="lt_main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="nav">
+                    <!--渲染-->
+                </div>
+                <div class="product">
+                    <ul>
+                        <!--<li>-->
+                        <!--<a href="#">-->
+                        <!--<img src="./images/none.png" alt="">-->
+                        <!--<p>耐克</p>-->
+                        <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--底部-->
     <div class="lt_fooder">
         <ul>
@@ -79,16 +79,12 @@
 <script src="./js/category.js"></script>
 <script type="text/template" id="tmp_first">
     <ul>
-      {{each rows v i}}
-        <li  data-id={{v.id}} class="{{i==0?'now':''}}"><a href="#">{{v.categoryName}}</a></li>
+        {{each rows v i}}
+        <li class="{{i==0?'now':''}}"><a href="#">{{v.categoryName}}</a></li>
         {{/each}}
     </ul>
 </script>
 <script type="text/template" id="tmp_second">
-
-    {{if rows.length==0}}
-    <p class="hasno">该品牌分类下没有更多的信息</p>
-    {{/if}}
     {{each rows v i}}
     <li>
         <a href="#">
