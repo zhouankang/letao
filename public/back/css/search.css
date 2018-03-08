@@ -1,0 +1,60 @@
+
+.lt_search{
+    position: relative;
+    padding: 10px
+
+}
+.lt_search input{
+    height: 34px;
+    border: 1px solid #007aff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.lt_search button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007aff;
+    border: 1px solid #007aff;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+}
+.lt_header{
+    height: 45px;
+    background-color: #069;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.lt_fooder{
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #069;
+}
+.lt_history{
+    padding: 10px;
+}
+.lt_history div {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+}
+.lt_container ul{
+ border: 1px dashed red;
+}
+.lt_container ul li{
+    padding-left: 10px;
+    line-height: 30px;
+    border-bottom: 1px dashed red;
+}
+.lt_container ul li:nth-last-child(1){
+    border-bottom: none;
+}
+.btn_delete{
+    line-height: 30px;
+    color: #666;
+}
